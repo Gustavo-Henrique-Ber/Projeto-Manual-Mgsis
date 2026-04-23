@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema MGSIS</title>
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="mgsis-header" id="mgsis-main-header">
+        <div class="mgsis-top-accent"></div>
+        <div class="mgsis-container">
+
+            <a href="#" class="mgsis-logo-wrapper">
+                <svg class="mgsis-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM11 19.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.15.56 5.76 2.8 6.64 5.77l-6.64-2.28V4.07zm6.81 7.21L13 13.62v-4.14l6.81-1.67v3.47zm-6.81 8.65v-4.14l6.81 1.67c-.88 2.97-3.49 5.21-6.64 5.77l-.17-3.3z" />
+                </svg>
+                <span class="mgsis-logo-text-blue">MG</span>
+                <span class="mgsis-logo-text-yellow">SIS</span>
+            </a>
+
+            <button class="mgsis-mobile-btn" id="mgsis-toggle-btn" aria-label="Abrir menu de navegação">
+                <span class="mgsis-mobile-line"></span>
+                <span class="mgsis-mobile-line"></span>
+                <span class="mgsis-mobile-line"></span>
+            </button>
+
+            <nav class="mgsis-navigation" id="mgsis-nav-menu">
+                <ul class="mgsis-nav-list">
+                    
+                    <li class="mgsis-nav-item"><a href="index.html" class="mgsis-support-action">Início</a></li>
+
+                    <li class="mgsis-mobile-divider">MÓDULOS DO SISTEMA</li>
+
+                    <li class="mgsis-nav-item mgsis-mobile-only">
+                        <a href="#" class="mgsis-nav-link mgsis-mobile-module-link active">Cadastros</a>
+                    </li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Estoque</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Vendas</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Ordem de Serviço</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Compras</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Financeiro</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Relatórios</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Utilitários</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Ajuda</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="#"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <main class="mgsis-main-content">
+
+        <div class="mgsis-ajuda-wrapper">
+
+            <header class="mgsis-ajuda-header">
+                <h1>Central de Soluções</h1>
+                <p>Selecione uma área do sistema abaixo para encontrar respostas rápidas para o seu dia a dia.</p>
+            </header>
+
+            <div class="mgsis-categorias-nav">
+                <button class="mgsis-cat-btn active" data-filter="todos">Todas as Dúvidas</button>
+                <button class="mgsis-cat-btn" data-filter="cadastros">Cadastros</button>
+                <button class="mgsis-cat-btn" data-filter="vendas">Vendas e NFe</button>
+                <button class="mgsis-cat-btn" data-filter="financeiro">Financeiro</button>
+                <button class="mgsis-cat-btn" data-filter="estoque">Estoque</button>
+            </div>
+
+            <div class="mgsis-solucoes-grid">
+
+                <div class="mgsis-faq-card" data-category="cadastros">
+                    <div class="mgsis-faq-pergunta">
+                        <span>O sistema diz "CNPJ já cadastrado", o que fazer?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Isso significa que este cliente ou fornecedor já existe no banco de dados. Vá em "Consulta de
+                            Clientes", limpe os filtros de pesquisa e busque apenas por este CNPJ para localizar o
+                            cadastro oculto ou inativo.</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="cadastros">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Como inativar um colaborador que saiu da empresa?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Acesse Cadastros > Colaborador, abra o perfil do funcionário e desmarque a caixa "Ativo".
+                            <strong>Nunca exclua</strong> o cadastro, pois o histórico de vendas e ações dele deve ser
+                            mantido no sistema por segurança.</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="vendas">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Nota Fiscal Rejeitada (Erro de NCM). Como corrigir?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>O código NCM (Nomenclatura Comum do Mercosul) do produto está inválido ou desatualizado.
+                            Acesse o cadastro do produto, informe um NCM válido de 8 dígitos, salve e tente transmitir a
+                            nota novamente.</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="vendas">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Como aplicar desconto no total do pedido?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Na tela de fechamento da venda (Aba Pagamento), localize o campo "Desconto Global". Você pode
+                            inserir o desconto em valor ($) ou em porcentagem (%). O sistema rateará o desconto entre
+                            todos os itens.</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="financeiro">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Recebi uma conta duplicada. Como estornar?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Acesse o módulo Financeiro > Contas a Receber. Localize o título que foi baixado
+                            incorretamente, clique com o botão direito e selecione "Estornar Recebimento". O título
+                            voltará a ficar "Em Aberto".</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="financeiro">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Como lançar um recebimento parcial (o cliente pagou só a metade)?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Na tela de baixa do título, altere o campo "Valor Recebido" para a quantia exata que o
+                            cliente pagou. O sistema perguntará se você deseja gerar um novo título com o saldo devedor
+                            restante. Confirme.</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="estoque">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Por que meu estoque ficou negativo?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Isso acontece se as configurações do sistema permitirem "Venda sem Estoque". Significa que a
+                            mercadoria saiu fisicamente, mas a Nota de Entrada do fornecedor ainda não foi lançada no
+                            sistema.</p>
+                    </div>
+                </div>
+
+                <div class="mgsis-faq-card" data-category="estoque">
+                    <div class="mgsis-faq-pergunta">
+                        <span>Como fazer balanço ou contagem de estoque?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="mgsis-faq-resposta">
+                        <p>Vá em Estoque > Ajuste/Balanço. Inicie uma nova contagem, bipe os produtos (ou insira
+                            manualmente a quantidade física atual) e clique em "Processar". O ERP ajustará as sobras e
+                            faltas automaticamente.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mgsis-ajuda-footer">
+                <div class="mgsis-ajuda-icon">💡</div>
+                <h3>Precisa de algo mais complexo?</h3>
+                <p>Se a sua dúvida não está listada acima, nossa equipe está online para analisar sua tela e ajudar.</p>
+                <button class="mgsis-btn-suporte-direto">Chamar Suporte Humano</button>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="mgsis-footer">
+
+        <div class="mgsis-footer-accent"></div>
+
+        <div class="mgsis-footer-container">
+
+            <div class="mgsis-footer-col">
+                <a href="#" class="mgsis-footer-logo">
+                    <svg class="mgsis-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM11 19.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.15.56 5.76 2.8 6.64 5.77l-6.64-2.28V4.07zm6.81 7.21L13 13.62v-4.14l6.81-1.67v3.47zm-6.81 8.65v-4.14l6.81 1.67c-.88 2.97-3.49 5.21-6.64 5.77l-.17-3.3z" />
+                    </svg>
+                    <span class="mgsis-logo-text-blue">MG</span>
+                    <span class="mgsis-logo-text-yellow">SIS</span>
+                </a>
+                <p class="mgsis-footer-desc">Soluções completas em gestão empresarial. Simplificando processos e
+                    impulsionando resultados para o seu negócio.</p>
+            </div>
+
+            <div class="mgsis-footer-col">
+                <h4 class="mgsis-footer-title">Links Úteis</h4>
+                <ul class="mgsis-footer-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Manual do Usuário</a></li>
+                    <li><a href="#">Módulos do Sistema</a></li>
+                    <li><a href="#">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="mgsis-footer-col">
+                <h4 class="mgsis-footer-title">Suporte Técnico</h4>
+                <ul class="mgsis-footer-links">
+                    <li><a href="#">Abrir Chamado</a></li>
+                    <li><a href="#">Falar com Atendente</a></li>
+                    <li><a href="#">Atualizações do Sistema</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mgsis-footer-bottom">
+            <p>&copy; 2026 MGSIS ERP. Todos os direitos reservados. | Versão 3.4.1</p>
+        </div>
+
+    </footer>
+
+    <div id="mgsis-modal-imagem" class="mgsis-modal">
+        <span class="mgsis-modal-fechar">&times;</span>
+        <img class="mgsis-modal-conteudo" id="mgsis-img-ampliada">
+        <div id="mgsis-modal-legenda"></div>
+    </div>
+
+    <script src="teste.js"></script>
+</body>
+
+</html>
