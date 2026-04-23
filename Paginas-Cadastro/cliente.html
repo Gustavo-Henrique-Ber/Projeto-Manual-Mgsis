@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema MGSIS</title>
+    <link rel="stylesheet" href="../Estilizacoes/Manual.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="mgsis-header" id="mgsis-main-header">
+        <div class="mgsis-top-accent"></div>
+        <div class="mgsis-container">
+
+            <a href="#" class="mgsis-logo-wrapper">
+                <svg class="mgsis-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM11 19.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.15.56 5.76 2.8 6.64 5.77l-6.64-2.28V4.07zm6.81 7.21L13 13.62v-4.14l6.81-1.67v3.47zm-6.81 8.65v-4.14l6.81 1.67c-.88 2.97-3.49 5.21-6.64 5.77l-.17-3.3z" />
+                </svg>
+                <span class="mgsis-logo-text-blue">MG</span>
+                <span class="mgsis-logo-text-yellow">SIS</span>
+            </a>
+
+            <button class="mgsis-mobile-btn" id="mgsis-toggle-btn" aria-label="Abrir menu de navegação">
+                <span class="mgsis-mobile-line"></span>
+                <span class="mgsis-mobile-line"></span>
+                <span class="mgsis-mobile-line"></span>
+            </button>
+
+            <nav class="mgsis-navigation" id="mgsis-nav-menu">
+                <ul class="mgsis-nav-list">
+                    <li class="mgsis-nav-item"><a href="#" class="mgsis-nav-link">Início</a></li>
+                    <li class="mgsis-nav-item"><a href="#" class="mgsis-nav-link">Dúvidas</a></li>
+                    <li class="mgsis-nav-item"><a href="#" class="mgsis-support-action">Suporte</a></li>
+
+                    <li class="mgsis-mobile-divider">MÓDULOS DO SISTEMA</li>
+
+                    <li class="mgsis-nav-item mgsis-mobile-only">
+                        <a href="../Paginas-Cadastro/cadastro.html" class="mgsis-nav-link mgsis-mobile-module-link active">Cadastros</a>
+                    </li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Estoque/estoque.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Estoque</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Compras/vendas.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Vendas</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Ordem de servico/ordem_servico.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Ordem de Serviço</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Compras/compras.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Compras</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Financeiro/financeiro.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Financeiro</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Relatorios/relatorios.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Relatórios</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Utilitarios/utilitarios.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Utilitários</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Ajuda/ajuda.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Ajuda</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Sair/sair.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="mgsis-app-layout">
+
+        <aside class="mgsis-sidebar">
+            <div class="mgsis-sidebar-header">
+                <h2 class="mgsis-sidebar-title">SISTEMA <span class="mgsis-text-blue">ERP</span></h2>
+                <p class="mgsis-sidebar-subtitle">Manual do Usuário</p>
+            </div>
+
+            <ul class="mgsis-sidebar-menu">
+                <li>
+                    <a href="../index.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <circle cx="9" cy="12" r="3"></circle>
+                            <path d="M15 10h4"></path>
+                            <path d="M15 14h4"></path>
+                        </svg>
+                        INICIO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Cadastro/cadastro.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 15px; text-decoration: none; font-weight: bold; box-sizing: border-box; background-color: #435be0; color: #ffffff; border-left: 4px solid #ffffff;">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <circle cx="9" cy="12" r="3"></circle>
+                            <path d="M15 10h4"></path>
+                            <path d="M15 14h4"></path>
+                        </svg>
+                        CADASTROS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Estoque/estoque.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        ESTOQUE
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Vendas/vendas.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        VENDAS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Ordem de servico/ordem_servico.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                        ORDEM DE SERVIÇO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Compras/compras.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        COMPRAS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Financeiro/financeiro.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        FINANCEIRO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Relatorios/relatorios.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
+                        RELATÓRIOS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Utilitarios/utilitarios.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        UTILITÁRIOS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Ajuda/ajuda.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        AJUDA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Sair/sair.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        SAIR
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <main class="mgsis-main-content">
+
+
+            <div id="mgsis-tela-cliente">
+                <div class="mgsis-detalhes-page">
+
+                    <div class="mgsis-voltar-wrapper">
+                        <button class="mgsis-btn-voltar mgsis-btn-voltar-acao"
+                            onclick="window.location.href='cadastro.html'">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+                                fill="none">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Voltar para Cadastros
+                        </button>
+                    </div>
+
+                    <div class="mgsis-conteudo-documentacao">
+
+                        <div class="mgsis-page-header-info">
+                            <div class="mgsis-header-icone">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+
+                            <h3>Cadastro de Cliente</h3>
+                            <p>Gerencie as informações detalhadas da sua carteira de clientes, incluindo dados pessoais,
+                                endereços de entrega e contatos principais.</p>
+
+                        </div>
+
+                        <div class="mgsis-secao-retratil">
+
+                            <button class="mgsis-btn-toggle-guia">
+                                <div class="mgsis-guia-titulo-area">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        width="20" height="20">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                    <h4>Guia de Uso da Tela de Consulta</h4>
+                                </div>
+                                <svg class="mgsis-seta-icon" viewBox="0 0 24 24" width="18" height="18"
+                                    stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+
+                            <div class="mgsis-guia-corpo mgsis-conteudo-oculto">
+                                <p class="mgsis-guia-intro">Confira como utilizar os botões de ação e ferramentas
+                                    disponíveis na tela principal.</p>
+
+                                <div class="mgsis-guia-grid side-by-side">
+                                    <div class="mgsis-guia-item">
+                                        <div class="mgsis-guia-icone mgsis-bg-azul">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                            </svg>
+                                        </div>
+                                        <div class="mgsis-guia-texto">
+                                            <strong>Pesquisar:</strong>
+                                            <span>Filtre a lista de empresas.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mgsis-guia-item">
+                                        <div class="mgsis-guia-icone mgsis-bg-azul-claro">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                            </svg>
+                                        </div>
+                                        <div class="mgsis-guia-texto">
+                                            <strong>Ajuda:</strong>
+                                            <span>Manual da central de ajuda.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mgsis-guia-item">
+                                        <div class="mgsis-guia-icone mgsis-bg-azul-claro">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                                <path
+                                                    d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2">
+                                                </path>
+                                                <rect x="6" y="14" width="12" height="8"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="mgsis-guia-texto">
+                                            <strong>Imprimir:</strong>
+                                            <span>Gere relatórios impressos.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mgsis-guia-item">
+                                        <div class="mgsis-guia-icone mgsis-bg-vermelho">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <polyline points="3 6 5 6 21 6"></polyline>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="mgsis-guia-texto">
+                                            <strong>Excluir:</strong>
+                                            <span>Remova a empresa selecionada.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mgsis-guia-item">
+                                        <div class="mgsis-guia-icone mgsis-bg-azul-claro">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            </svg>
+                                        </div>
+                                        <div class="mgsis-guia-texto">
+                                            <strong>Adicionar:</strong>
+                                            <span>Clique para abrir o formulário de cadastro de uma nova empresa.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="mgsis-painel-dinamico-btn" onclick="mgsisAlternarPainelDinamico(this)"
+                            style="margin-top: 15px;">
+                            <span class="mgsis-btn-texto">Ver Atalhos de Teclado (Menu de Contexto)</span>
+                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16" height="16"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="mgsis-painel-dinamico-wrapper">
+                            <div class="mgsis-atalhos-container">
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <i class="fa-solid fa-circle-plus mgsis-icone-verde"></i>
+                                        <div class="mgsis-atalho-textos">
+                                            <span class="mgsis-atalho-texto">Cadastro Rápido</span>
+                                            <span class="mgsis-atalho-desc">Abre um formulário simplificado para
+                                                registrar o básico do cliente na hora.</span>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-atalho-tecla">Alt+I</div>
+                                </div>
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <i class="fa-solid fa-pen mgsis-icone-azul"></i>
+                                        <div class="mgsis-atalho-textos">
+                                            <span class="mgsis-atalho-texto">Alterar</span>
+                                            <span class="mgsis-atalho-desc">Edita todos os dados da ficha do cliente
+                                                selecionado na grade.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <i class="fa-solid fa-circle-minus mgsis-icone-vermelho"></i>
+                                        <div class="mgsis-atalho-textos">
+                                            <span class="mgsis-atalho-texto">Excluir</span>
+                                            <span class="mgsis-atalho-desc">Remove o cadastro (apenas se não houver
+                                                movimentação financeira atrelada).</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <i class="fa-solid fa-user mgsis-icone-cinza"></i>
+                                        <div class="mgsis-atalho-textos">
+                                            <span class="mgsis-atalho-texto">Conta Cliente</span>
+                                            <span class="mgsis-atalho-desc">Acessa o painel financeiro, saldos devedores
+                                                e limite de crédito.</span>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-atalho-tecla">Alt+C</div>
+                                </div>
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <i class="fa-solid fa-crosshairs mgsis-icone-cinza"></i>
+                                        <div class="mgsis-atalho-textos">
+                                            <span class="mgsis-atalho-texto">Histórico Movimento</span>
+                                            <span class="mgsis-atalho-desc">Consulta todas as vendas, notas fiscais e
+                                                orçamentos emitidos.</span>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-atalho-tecla">Alt+H</div>
+                                </div>
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <i class="fa-solid fa-gears mgsis-icone-cinza"></i>
+                                        <div class="mgsis-atalho-textos">
+                                            <span class="mgsis-atalho-texto">Gerar Contrato</span>
+                                            <span class="mgsis-atalho-desc">Inicia a criação de um contrato de prestação
+                                                de serviços ou venda recorrente.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-atalho-item">
+                                    <div class="mgsis-atalho-esquerda">
+                                        <div style="width: 16px; display: inline-block;"></div>
+                                        <div class="mgsis-atalho-textos" style="margin-left: 12px;">
+                                            <span class="mgsis-atalho-texto">Programa de Fidelidade</span>
+                                            <span class="mgsis-atalho-desc">Gerencia pontos, descontos e benefícios
+                                                acumulados por este cliente.</span>
+                                        </div>
+                                    </div>
+                                    <i class="fa-solid fa-caret-right mgsis-icone-cinza"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mgsis-secao-retratil">
+
+                            <button class="mgsis-btn-toggle-galeria">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                                <span>Ver Capturas de Tela do Sistema</span>
+                                <svg class="mgsis-seta-icon" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+
+                            <div class="mgsis-area-imagens mgsis-conteudo-oculto">
+                                <div class="mgsis-area-header">
+                                    <h4>Conheça a Interface do Sistema</h4>
+                                    <p>Preparamos algumas capturas de tela para você visualizar como o sistema funciona
+                                        na prática.</p>
+                                </div>
+
+                                <div class="mgsis-galeria-grid">
+                                    <div class="mgsis-img-card">
+                                        <div class="mgsis-img-wrapper">
+                                            <img src="Imagens/Imagens-Cadastro/Captura de tela 2026-04-10 160523.png"
+                                                alt="Tela de Consulta ERP">
+                                            <div class="mgsis-img-overlay">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                </svg>
+                                                <span>Visualizar</span>
+                                            </div>
+                                        </div>
+                                        <div class="mgsis-img-info">
+                                            <span>Painel Principal de Consulta e Filtros</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mgsis-img-card">
+                                        <div class="mgsis-img-wrapper">
+                                            <img src="Imagens/Imagens-Cadastro/Captura de tela 2026-04-10 160523.png"
+                                                alt="Tela de Consulta ERP">
+                                            <div class="mgsis-img-overlay">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                </svg>
+                                                <span>Visualizar</span>
+                                            </div>
+                                        </div>
+                                        <div class="mgsis-img-info">
+                                            <span>Painel Principal de Consulta e Filtros</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="mgsis-divisor">
+
+                        <div class="mgsis-abas-container">
+
+                            <div class="mgsis-instrucao-abas" style="margin-bottom: 15px;">
+                                <div class="mgsis-alerta-info">
+                                    <div class="mgsis-alerta-icone">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="mgsis-alerta-texto">
+                                        <strong>Navegação por Abas:</strong> O cadastro é extenso e foi dividido por
+                                        categorias para facilitar o preenchimento. Clique nas opções abaixo para
+                                        alternar entre as seções (Endereço, Contatos, etc). <br>
+                                        <em>📱 Dica Mobile: Se estiver no celular, deslize as abas azuis para os lados
+                                            para ver o restante das opções!</em>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mgsis-abas-header">
+                                <button class="mgsis-tab-btn active" data-tab="dados">Dados</button>
+                                <button class="mgsis-tab-btn" data-tab="endereco">Endereço</button>
+                                <button class="mgsis-tab-btn" data-tab="documentos">Documentos</button>
+                                <button class="mgsis-tab-btn" data-tab="bancos">Bancos</button>
+                                <button class="mgsis-tab-btn" data-tab="contatos">Contatos</button>
+                                <button class="mgsis-tab-btn" data-tab="complemento">Complemento</button>
+                                <button class="mgsis-tab-btn" data-tab="preferencias">Preferências</button>
+                                <button class="mgsis-tab-btn" data-tab="vendas">Vendas</button>
+                                <button class="mgsis-tab-btn" data-tab="frota">Frota</button>
+                                <button class="mgsis-tab-btn" data-tab="ficha">Ficha</button>
+                                <button class="mgsis-tab-btn" data-tab="ativos">Ativos</button>
+                            </div>
+
+                            <br>
+
+                            <div class="mgsis-abas-content">
+
+                                <div class="mgsis-tab-pane active" id="dados">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Informações Principais</h5>
+                                        <p>Nesta aba, você preenche a identificação completa do cadastro. Entenda a
+                                            função de cada bloco da tela para evitar erros de emissão de notas.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Dica de Ouro:</strong> Use os botões azuis <span>Validar
+                                                        ✔</span> e
+                                                    <span>Consultar ✔</span> ao lado do CNPJ/CPF. O sistema puxa os
+                                                    dados direto
+                                                    da Receita Federal, poupando tempo de digitação!
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M12 20V10"></path>
+                                                                <path d="M18 20V4"></path>
+                                                                <path d="M6 20v-4"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Configurações Iniciais</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo:</span> <span
+                                                                class="mgsis-campo-desc">Define se é Pessoa FÍSICA ou
+                                                                JURÍDICA.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo de Cadastro:</span> <span
+                                                                class="mgsis-campo-desc">Marque se é Cliente, Fornecedor
+                                                                ou Transporte (pode ser mais de um).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Inativo:</span> <span
+                                                                class="mgsis-campo-desc">Marcação para bloquear vendas
+                                                                futuras para este cadastro.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                                                                </path>
+                                                                <circle cx="12" cy="7" r="4"></circle>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Dados de Identificação</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Nome/Razão Social:</span> <span
+                                                                class="mgsis-campo-desc">Nome de registro legal
+                                                                (obrigatório).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Apelido/Fantasia:</span> <span
+                                                                class="mgsis-campo-desc">Nome comercial (como a loja é
+                                                                conhecida).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">CNPJ/CPF:</span> <span
+                                                                class="mgsis-campo-desc">Documento principal para
+                                                                emissão de documentos.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2">
+                                                                </rect>
+                                                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Fiscal e Tributário</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo Contrib.:</span> <span
+                                                                class="mgsis-campo-desc">Define as regras de ICMS
+                                                                (Contribuinte, Isento, etc).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Insc. Estadual:</span> <span
+                                                                class="mgsis-campo-desc">Registro estadual, obrigatório
+                                                                para NF-e.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Consumidor Final:</span> <span
+                                                                class="mgsis-campo-desc">Altera o cálculo de partilha de
+                                                                impostos na venda.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Contato e Faturamento</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Telefones/Whats:</span> <span
+                                                                class="mgsis-campo-desc">Canais diretos de
+                                                                comunicação.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">E-mail NF-e:</span> <span
+                                                                class="mgsis-campo-desc">E-mail onde o sistema enviará o
+                                                                XML/PDF das notas.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Foto/Logo:</span> <span
+                                                                class="mgsis-campo-desc">No círculo direito da tela,
+                                                                clique em [...] para subir a imagem.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/Captura de tela 2026-04-10 160523.png"
+                                                                    alt="Tela de Dados">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Dados Gerais</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="endereco">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Gerenciamento de Endereços</h5>
+                                        <p>Cadastre múltiplos endereços (como principal, cobrança e entrega) para o
+                                            mesmo registro. O sistema permite manter um histórico completo de
+                                            localizações.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Dica de Produtividade:</strong> Digite o
+                                                    <strong>CEP</strong> primeiro! O sistema fará uma busca automática e
+                                                    preencherá o Logradouro, Bairro e Cidade para você, restando apenas
+                                                    informar o Número.
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                </path>
+                                                                <circle cx="12" cy="10" r="3"></circle>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Dados do Logradouro</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">CEP:</span> <span
+                                                                class="mgsis-campo-desc">Código postal. Preenche os
+                                                                demais dados automaticamente.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Logradouro / Bairro:</span>
+                                                            <span class="mgsis-campo-desc">Rua/Avenida e bairro. Campos
+                                                                com (*) são obrigatórios.</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span class="mgsis-campo-nome">Nº
+                                                                / Complemento:</span> <span
+                                                                class="mgsis-campo-desc">Número do local (obrigatório) e
+                                                                informações extras (sala, bloco, etc).</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Classificação e Cidade</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo de Endereço:</span> <span
+                                                                class="mgsis-campo-desc">Ex: Comercial, Residencial,
+                                                                Entrega, Cobrança.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Checkbox Padrão:</span> <span
+                                                                class="mgsis-campo-desc">Marque esta caixa se este for o
+                                                                endereço principal da empresa.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Cód. Cidade / Cidade:</span>
+                                                            <span class="mgsis-campo-desc">Código IBGE e nome do
+                                                                município. Use o botão [...] para buscar se
+                                                                necessário.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                                                </path>
+                                                                <polyline points="14 2 14 8 20 8"></polyline>
+                                                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                                <polyline points="10 9 9 9 8 9"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Ações da Grade de Endereços</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Salvar ✔:</span> <span
+                                                                class="mgsis-campo-desc">Insere os dados preenchidos na
+                                                                linha da tabela abaixo.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Deletar 🗑:</span> <span
+                                                                class="mgsis-campo-desc">Remove o endereço que estiver
+                                                                selecionado na tabela.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Rodapé
+                                                                (Salvar/Imprimir):</span> <span
+                                                                class="mgsis-campo-desc">Salva todas as alterações do
+                                                                cadastro geral ou imprime a listagem.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/Endereco.png"
+                                                                    alt="Tela de Endereços">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Cadastro de Endereços</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="documentos">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Documentos Adicionais</h5>
+                                        <p>Registre documentos secundários do cliente, como RG, CNH, Passaporte ou
+                                            Alvarás. Isso cria um dossiê completo e facilita consultas futuras.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Atenção:</strong> O CNPJ ou CPF principal
+                                                    <strong>não</strong> deve ser inserido aqui. Esta aba serve apenas
+                                                    para documentos complementares! O documento principal fica na aba
+                                                    "Dados".
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                                                </path>
+                                                                <polyline points="14 2 14 8 20 8"></polyline>
+                                                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                                <polyline points="10 9 9 9 8 9"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Inserção do Documento</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo: *</span> <span
+                                                                class="mgsis-campo-desc">Informe a categoria (Ex: RG,
+                                                                CNH, Inscrição Municipal, Passaporte). Campo
+                                                                obrigatório.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Descrição: *</span> <span
+                                                                class="mgsis-campo-desc">O número ou identificação do
+                                                                documento em si. Campo obrigatório.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Ações da Lista</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Incluir ✔:</span> <span
+                                                                class="mgsis-campo-desc">Após preencher o Tipo e a
+                                                                Descrição, clique aqui para adicionar o documento à
+                                                                tabela inferior.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Deletar 🗑:</span> <span
+                                                                class="mgsis-campo-desc">Selecione um documento na
+                                                                tabela e clique aqui para removê-lo do histórico.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/Documento.png"
+                                                                    alt="Tela de Documentos Adicionais">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Inclusão de Documentos</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="bancos">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Contas Bancárias</h5>
+                                        <p>Cadastre as informações bancárias vinculadas a este cliente ou fornecedor.
+                                            Estes dados são essenciais para rotinas de faturamento, emissão de boletos e
+                                            transferências financeiras.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Dica do Financeiro:</strong> Preencha a <strong>Agência e
+                                                        Conta</strong> exatamente como consta no cartão, incluindo os
+                                                    dígitos verificadores (se houver). Isso evita rejeições em arquivos
+                                                    de remessa bancária!
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="21" width="18" height="2" rx="1" ry="1">
+                                                                </rect>
+                                                                <path d="M4 21v-9"></path>
+                                                                <path d="M8 21v-9"></path>
+                                                                <path d="M12 21v-9"></path>
+                                                                <path d="M16 21v-9"></path>
+                                                                <path d="M20 21v-9"></path>
+                                                                <polygon points="12 2 2 10 22 10"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Identificação da Conta</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Banco: *</span> <span
+                                                                class="mgsis-campo-desc">Selecione o código/nome da
+                                                                instituição financeira na lista suspensa.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Agência / Conta: *</span> <span
+                                                                class="mgsis-campo-desc">Números da agência e conta
+                                                                corrente. Campos com asterisco (*) são
+                                                                obrigatórios.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Contato da Agência</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Gerente:</span> <span
+                                                                class="mgsis-campo-desc">Nome do gerente da conta
+                                                                (excelente para agilizar negociações futuras).</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Telefone:</span> <span
+                                                                class="mgsis-campo-desc">Número de contato direto da
+                                                                agência ou do gerente responsável.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                                                </path>
+                                                                <polyline points="14 2 14 8 20 8"></polyline>
+                                                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                                <polyline points="10 9 9 9 8 9"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Ações da Lista</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Salvar ✔:</span> <span
+                                                                class="mgsis-campo-desc">Grava a nova conta na tabela
+                                                                abaixo. Lembre-se de salvar o cadastro geral no
+                                                                final!</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Deletar 🗑:</span> <span
+                                                                class="mgsis-campo-desc">Selecione uma linha da tabela e
+                                                                clique aqui para remover a conta bancária.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/Banco.png"
+                                                                    alt="Tela de Dados Bancários">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Cadastro de Bancos</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="contatos">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Contatos Vinculados</h5>
+                                        <p>Cadastre as pessoas responsáveis dentro da empresa do cliente ou fornecedor.
+                                            Ter a lista de contatos organizada (Financeiro, Compras, Diretoria) agiliza
+                                            muito a comunicação do dia a dia.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path
+                                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Dica de Comunicação:</strong> Preencha corretamente o campo
+                                                    <strong>E-mail</strong> do contato Financeiro. O sistema poderá usar
+                                                    esse endereço no futuro para envio automático de boletos e
+                                                    cobranças!
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                                                                </path>
+                                                                <circle cx="12" cy="7" r="4"></circle>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Dados da Pessoa</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Nome: *</span> <span
+                                                                class="mgsis-campo-desc">Nome completo do contato. Este
+                                                                é o único campo obrigatório.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Cargo / Relação:</span> <span
+                                                                class="mgsis-campo-desc">Ex: Gerente Financeiro,
+                                                                Diretor, Comprador, Sócio. Ajuda a saber com quem
+                                                                falar.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <circle cx="12" cy="12" r="4"></circle>
+                                                                <path
+                                                                    d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Meios de Contato</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Telefone:</span> <span
+                                                                class="mgsis-campo-desc">Número direto (ramal ou
+                                                                celular) da pessoa.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">E-mail:</span> <span
+                                                                class="mgsis-campo-desc">Endereço de e-mail corporativo
+                                                                do contato.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Ações da Lista</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Incluir ✔:</span> <span
+                                                                class="mgsis-campo-desc">Adiciona o contato preenchido à
+                                                                tabela de contatos.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Deletar 🗑:</span> <span
+                                                                class="mgsis-campo-desc">Selecione um contato na tabela
+                                                                inferior e clique aqui para removê-lo.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_8ea730.png"
+                                                                    alt="Tela de Contatos Vinculados">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Cadastro de Contatos</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="complemento">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Dados Complementares</h5>
+                                        <p>Preencha informações adicionais detalhadas do cliente (geralmente Pessoa
+                                            Física). Estes dados são essenciais para análise de crediário, limites de
+                                            crédito e histórico do consumidor.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Dica de Crediário:</strong> Para vendas a prazo ou carnê, o
+                                                    preenchimento da <strong>Renda Mensal</strong> e do <strong>Estado
+                                                        Civil</strong> costuma ser obrigatório para a aprovação
+                                                    financeira.
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                                                                </path>
+                                                                <circle cx="12" cy="7" r="4"></circle>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Perfil Pessoal</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Sexo / Nasc.:</span> <span
+                                                                class="mgsis-campo-desc">Gênero biológico e data de
+                                                                nascimento (útil para ações de marketing de
+                                                                aniversário).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Estado Civil:</span> <span
+                                                                class="mgsis-campo-desc">Selecione a situação conjugal
+                                                                na lista. Se casado(a), informe o nome do cônjuge e
+                                                                telefone ao lado.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2">
+                                                                </path>
+                                                                <circle cx="9" cy="7" r="4"></circle>
+                                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Filiação (Pais)</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Nome do Pai:</span> <span
+                                                                class="mgsis-campo-desc">Nome completo do pai do
+                                                                cliente.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Nome da Mãe:</span> <span
+                                                                class="mgsis-campo-desc">Nome completo da mãe (dado
+                                                                muito utilizado como chave de segurança em consultas de
+                                                                crédito).</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2">
+                                                                </rect>
+                                                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Profissional e Renda</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Empresa:</span> <span
+                                                                class="mgsis-campo-desc">Local onde o cliente trabalha e
+                                                                telefone de contato comercial.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Renda Mensal:</span> <span
+                                                                class="mgsis-campo-desc">Valor do salário ou faturamento
+                                                                mensal comprovado. Base para cálculo do limite de
+                                                                crédito.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_6f36cc.png"
+                                                                    alt="Tela de Dados Complementares">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Dados Complementares</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="preferencias">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Preferências Comerciais</h5>
+                                        <p>Configure as regras padrão de faturamento para este cliente. Aqui você define
+                                            tabelas de preço, limites de crédito, descontos automáticos e regras de
+                                            bloqueio por inadimplência.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path
+                                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                                        </path>
+                                                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Atenção ao Risco:</strong> O campo <strong>"Venda dias
+                                                        vencido"</strong> atua como um bloqueio automático de segurança.
+                                                    Se definido como "5", por exemplo, o sistema não deixará emitir
+                                                    novas notas caso o cliente tenha boletos atrasados há mais de 5
+                                                    dias.
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z">
+                                                                </path>
+                                                                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Padrões de Venda</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo Preço Padrão:</span> <span
+                                                                class="mgsis-campo-desc">Tabela de preços automática
+                                                                para este cliente (Ex: ATACADO, VAREJO, REVENDA).</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Condição / Responsável:</span>
+                                                            <span class="mgsis-campo-desc">Forma de pagamento favorita e
+                                                                o vendedor/representante que atende esta conta.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Análise de Crédito</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Venda a Prazo:</span> <span
+                                                                class="mgsis-campo-desc">Caixa de marcação que libera ou
+                                                                bloqueia a emissão de boletos e vendas faturadas.</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Limite de Crédito:</span> <span
+                                                                class="mgsis-campo-desc">Valor máximo em R$ que o
+                                                                cliente pode ter em dívidas abertas. Se ultrapassar, o
+                                                                sistema bloqueia.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <line x1="19" y1="5" x2="5" y2="19"></line>
+                                                                <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                                                                <circle cx="17.5" cy="17.5" r="2.5"></circle>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Regras e Alertas</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span class="mgsis-campo-nome">%
+                                                                Desc. / Acréscimo:</span> <span
+                                                                class="mgsis-campo-desc">Percentual fixo aplicado a
+                                                                todos os pedidos (útil para negociações especiais de
+                                                                contrato).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Observação para Vendas:</span>
+                                                            <span class="mgsis-campo-desc">Aviso que aparecerá como um
+                                                                "Alerta" na tela do PDV/Faturamento toda vez que
+                                                                selecionarem este cliente.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_6f3ac6.png"
+                                                                    alt="Tela de Preferências Comerciais">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Painel de Regras Comerciais e Crédito</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="vendas">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Histórico de Vendas</h5>
+                                        <p>Consulte todas as movimentações de produtos atreladas a este cadastro.
+                                            Acompanhe exatamente o que o cliente comprou, quando comprou, as quantidades
+                                            e os preços praticados em cada negociação.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações da Tela</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Dica de Pesquisa:</strong> Use os pequenos <strong>ícones de
+                                                        funil (Y) e lupa</strong> no cabeçalho azul da tabela para
+                                                    filtrar rapidamente um produto específico no meio do histórico!
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Filtros de Período</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Período Rápido:</span> <span
+                                                                class="mgsis-campo-desc">Selecione opções ágeis como
+                                                                "HOJE", "ESTE MÊS" ou "ÚLTIMOS 30 DIAS".</span></div>
+                                                        <div class="mgsis-campo-linha"><span class="mgsis-campo-nome">De
+                                                                / Até:</span> <span class="mgsis-campo-desc">Digite ou
+                                                                escolha no calendário um intervalo de datas
+                                                                personalizado e clique no botão azul
+                                                                <strong>Filtrar</strong>.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                                                </path>
+                                                                <polyline points="3.27 6.96 12 12.01 20.73 6.96">
+                                                                </polyline>
+                                                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Detalhamento da Lista</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Data / Documento:</span> <span
+                                                                class="mgsis-campo-desc">Exibe o dia exato da transação
+                                                                e o número do documento gerado (NFe, Cupom, etc).</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Produto / Qtd:</span> <span
+                                                                class="mgsis-campo-desc">Código do fabricante, descrição
+                                                                do item e a quantidade faturada.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                                                <path
+                                                                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Custos e Valores</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Custo Rep. / Unitário:</span>
+                                                            <span class="mgsis-campo-desc">Mostra o custo da mercadoria
+                                                                na época da venda, ajudando a calcular a rentabilidade
+                                                                da operação.</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Venda / $$:</span> <span
+                                                                class="mgsis-campo-desc">Valor unitário praticado na
+                                                                negociação e o valor total (em Reais) daquela
+                                                                linha.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_6f3eab.png"
+                                                                    alt="Tela de Histórico de Vendas">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Filtros e Grade de Histórico de
+                                                                    Movimentação</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="frota">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Frota de Veículos</h5>
+                                        <p>Cadastre os veículos pertencentes a este cliente ou empresa. Módulo essencial
+                                            para controle de manutenções, requisições de peças e faturamento de
+                                            abastecimentos por placa.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Atenção:</strong> Os campos marcados com asterisco (*) como
+                                                    <strong>Montadora, Descrição e Placa</strong> são obrigatórios para
+                                                    conseguir incluir o veículo no sistema!
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2">
+                                                                </path>
+                                                                <circle cx="7" cy="17" r="2"></circle>
+                                                                <path d="M9 17h6"></path>
+                                                                <circle cx="17" cy="17" r="2"></circle>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Inclusão Rápida</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Montadora / Descrição:</span>
+                                                            <span class="mgsis-campo-desc">Selecione a marca (Ex:
+                                                                CHEVROLET) e digite o modelo exato do veículo.</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Placa / Renavam:</span> <span
+                                                                class="mgsis-campo-desc">A placa para identificação
+                                                                imediata e o número de registro oficial
+                                                                (opcional).</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Detalhes Técnicos</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Especificações:</span> <span
+                                                                class="mgsis-campo-desc">A grade inferior guarda dados
+                                                                completos: Ano, Câmbio, Motor, Combustível e
+                                                                Chassi.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Controle de KM:</span> <span
+                                                                class="mgsis-campo-desc">A coluna KM ajuda a projetar
+                                                                datas para revisões e trocas de óleo.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Ações da Frota</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Incluir ✔:</span> <span
+                                                                class="mgsis-campo-desc">Grava os dados preenchidos e
+                                                                joga o veículo para a tabela inferior.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Deletar 🗑:</span> <span
+                                                                class="mgsis-campo-desc">Selecione uma linha da tabela e
+                                                                clique para remover o veículo do cadastro.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_6f4609.png"
+                                                                    alt="Tela de Cadastro de Frota">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Inclusão e Grade de Veículos</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="ficha">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Ficha de Ocorrências (CRM)</h5>
+                                        <p>Registre o histórico de relacionamento com este cliente. Use esta tela para
+                                            anotar detalhes de visitas comerciais, negociações, ligações de cobrança ou
+                                            alertas temporários.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path
+                                                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Auditoria:</strong> O sistema registra automaticamente o
+                                                    <strong>USUÁRIO</strong> que fez a inclusão na tabela inferior. Isso
+                                                    garante total rastreabilidade sobre quem anotou o quê no cadastro do
+                                                    cliente.
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path
+                                                                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7">
+                                                                </path>
+                                                                <path
+                                                                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Registro da Ocorrência</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Lançamento: *</span> <span
+                                                                class="mgsis-campo-desc">O título ou assunto principal
+                                                                (Ex: "Visita de Vendas", "Cobrança de Boleto"). Campo
+                                                                obrigatório.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Observações:</span> <span
+                                                                class="mgsis-campo-desc">Detalhamento completo do que
+                                                                foi conversado ou acordado com a pessoa.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Período de Validade</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Data Início: *</span> <span
+                                                                class="mgsis-campo-desc">A data em que a ocorrência
+                                                                aconteceu ou a partir de quando o alerta é
+                                                                válido.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Data Fim: *</span> <span
+                                                                class="mgsis-campo-desc">Data limite para exibição ou
+                                                                validade dessa anotação.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Ações da Ficha</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Incluir ✔:</span> <span
+                                                                class="mgsis-campo-desc">Adiciona o registro na grade
+                                                                inferior, gravando seu usuário como autor.</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Deletar 🗑:</span> <span
+                                                                class="mgsis-campo-desc">Seleciona e exclui um registro
+                                                                feito anteriormente (se você tiver permissão).</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_6f49e9.png"
+                                                                    alt="Tela de Ficha e Ocorrências">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Painel de Inclusão de Ocorrências (CRM)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-tab-pane" id="ativos">
+
+                                    <div class="mgsis-aba-cabecalho">
+                                        <h5>Controle de Ativos</h5>
+                                        <p>Registre bens, veículos ou equipamentos de alto valor associados a este
+                                            cadastro. Essa tela é fundamental para controle de patrimônio, garantias de
+                                            crédito, seguros ou equipamentos cedidos em comodato.</p>
+                                    </div>
+
+                                    <button class="mgsis-painel-dinamico-btn"
+                                        onclick="mgsisAlternarPainelDinamico(this)">
+                                        <span class="mgsis-btn-texto">Ver Explicações dos Campos</span>
+                                        <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div class="mgsis-painel-dinamico-wrapper">
+                                        <div class="mgsis-painel-dinamico-inner">
+
+                                            <div class="mgsis-alerta-info">
+                                                <div class="mgsis-alerta-icone">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </div>
+                                                <div class="mgsis-alerta-texto">
+                                                    <strong>Preenchimento Obrigatório:</strong> Quase todos os dados
+                                                    desta aba exigem atenção. Campos como <strong>Tipo, Modelo, Placa,
+                                                        Chassi e Renavam</strong> possuem o asterisco (*) e não podem
+                                                    ficar em branco na hora de salvar.
+                                                </div>
+                                            </div>
+
+                                            <div class="mgsis-doc-grid">
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                                                <polyline points="2 17 12 22 22 17"></polyline>
+                                                                <polyline points="2 12 12 17 22 12"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Identificação do Bem</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Tipo: *</span> <span
+                                                                class="mgsis-campo-desc">Categoria do bem (Ex: VEICULO,
+                                                                MAQUINARIO, IMÓVEL).</span></div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Modelo: *</span> <span
+                                                                class="mgsis-campo-desc">A descrição exata ou nome
+                                                                comercial do ativo cadastrado.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2">
+                                                                </rect>
+                                                                <line x1="8" y1="8" x2="16" y2="8"></line>
+                                                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                                                <line x1="8" y1="16" x2="16" y2="16"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Registros Oficiais</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Placa / Renavam: *</span> <span
+                                                                class="mgsis-campo-desc">Dados essenciais para
+                                                                identificação do ativo nos órgãos de trânsito.</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Chassi: *</span> <span
+                                                                class="mgsis-campo-desc">O número de identificação único
+                                                                (VIN) gravado no ativo.</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mgsis-doc-card">
+                                                    <div class="mgsis-card-header">
+                                                        <div class="mgsis-icon-wrapper">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                                                <path
+                                                                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <h6>Valores e Ações</h6>
+                                                    </div>
+                                                    <div class="mgsis-card-body">
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Valor Unitário:</span> <span
+                                                                class="mgsis-campo-desc">O valor estimado ou de nota
+                                                                fiscal do bem (útil para cálculo de patrimônio).</span>
+                                                        </div>
+                                                        <div class="mgsis-campo-linha"><span
+                                                                class="mgsis-campo-nome">Botão Salvar ✔:</span> <span
+                                                                class="mgsis-campo-desc">Confirma a inclusão e exibe o
+                                                                ativo na tabela inferior.</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mgsis-aba-img-container" style="margin-top: 20px;">
+                                        <button class="mgsis-painel-dinamico-btn"
+                                            onclick="mgsisAlternarPainelDinamico(this)">
+                                            <span class="mgsis-btn-texto">Ver Capturas desta Aba</span>
+                                            <svg class="mgsis-painel-dinamico-seta" viewBox="0 0 24 24" width="16"
+                                                height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="mgsis-painel-dinamico-wrapper">
+                                            <div class="mgsis-painel-dinamico-inner">
+                                                <div class="mgsis-aba-img-galeria">
+                                                    <div class="mgsis-galeria-grid">
+                                                        <div class="mgsis-img-card">
+                                                            <div class="mgsis-img-wrapper">
+                                                                <img src="Imagens/Imagens-Cadastro/image_6f4dc6.png"
+                                                                    alt="Tela de Cadastro de Ativos">
+                                                                <div class="mgsis-img-overlay">
+                                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2">
+                                                                        <path
+                                                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                                                    </svg>
+                                                                    <span>Visualizar</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mgsis-img-info">
+                                                                <span>Interface de Controle de Bens e Patrimônio</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mgsis-timeline-wrapper">
+                            <h4 class="mgsis-timeline-titulo">Fluxo Ideal de Cadastro</h4>
+
+                            <div class="mgsis-timeline-container">
+
+                                <div class="mgsis-timeline-item">
+                                    <div class="mgsis-timeline-icone">1</div>
+                                    <div class="mgsis-timeline-conteudo">
+                                        <h5 class="mgsis-timeline-passo-titulo">Identificação Base</h5>
+                                        <p>Digite o <strong>CNPJ ou CPF</strong> e utilize os botões de validação da
+                                            Receita Federal para preencher os dados oficiais automaticamente.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-timeline-item">
+                                    <div class="mgsis-timeline-icone">2</div>
+                                    <div class="mgsis-timeline-conteudo">
+                                        <h5 class="mgsis-timeline-passo-titulo">Endereçamento</h5>
+                                        <p>Navegue até a aba <strong>Endereço</strong>. Digite o CEP para que o sistema
+                                            puxe Logradouro, Bairro e Cidade. Preencha apenas o Número.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-timeline-item">
+                                    <div class="mgsis-timeline-icone">3</div>
+                                    <div class="mgsis-timeline-conteudo">
+                                        <h5 class="mgsis-timeline-passo-titulo">Parâmetros Fiscais</h5>
+                                        <p>Na aba <strong>Complemento/Fiscal</strong>, defina o Tipo de Contribuinte e
+                                            informe a Inscrição Estadual (crucial para emissão de NF-e).</p>
+                                    </div>
+                                </div>
+
+                                <div class="mgsis-timeline-item mgsis-timeline-ultimo">
+                                    <div class="mgsis-timeline-icone mgsis-icone-sucesso"><i
+                                            class="fa-solid fa-check"></i></div>
+                                    <div class="mgsis-timeline-conteudo">
+                                        <h5 class="mgsis-timeline-passo-titulo">Salvar Cadastro</h5>
+                                        <p>Revise os dados e clique no botão azul <strong>Salvar (F2)</strong> no rodapé
+                                            da tela para concluir a inclusão do cliente.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="mgsis-footer">
+
+        <div class="mgsis-footer-accent"></div>
+
+        <div class="mgsis-footer-container">
+
+            <div class="mgsis-footer-col">
+                <a href="#" class="mgsis-footer-logo">
+                    <svg class="mgsis-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM11 19.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.15.56 5.76 2.8 6.64 5.77l-6.64-2.28V4.07zm6.81 7.21L13 13.62v-4.14l6.81-1.67v3.47zm-6.81 8.65v-4.14l6.81 1.67c-.88 2.97-3.49 5.21-6.64 5.77l-.17-3.3z" />
+                    </svg>
+                    <span class="mgsis-logo-text-blue">MG</span>
+                    <span class="mgsis-logo-text-yellow">SIS</span>
+                </a>
+                <p class="mgsis-footer-desc">Soluções completas em gestão empresarial. Simplificando processos e
+                    impulsionando resultados para o seu negócio.</p>
+            </div>
+
+            <div class="mgsis-footer-col">
+                <h4 class="mgsis-footer-title">Links Úteis</h4>
+                <ul class="mgsis-footer-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Manual do Usuário</a></li>
+                    <li><a href="#">Módulos do Sistema</a></li>
+                    <li><a href="#">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="mgsis-footer-col">
+                <h4 class="mgsis-footer-title">Suporte Técnico</h4>
+                <ul class="mgsis-footer-links">
+                    <li><a href="#">Abrir Chamado</a></li>
+                    <li><a href="#">Falar com Atendente</a></li>
+                    <li><a href="#">Atualizações do Sistema</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mgsis-footer-bottom">
+            <p>&copy; 2026 MGSIS ERP. Todos os direitos reservados. | Versão 3.4.1</p>
+        </div>
+
+    </footer>
+
+    <div id="mgsis-modal-imagem" class="mgsis-modal">
+        <span class="mgsis-modal-fechar">&times;</span>
+        <img class="mgsis-modal-conteudo" id="mgsis-img-ampliada">
+        <div id="mgsis-modal-legenda"></div>
+    </div>
+
+    <script src="../Estilizacoes/Manual.js"></script>
+
+</body>
+
+</html>
