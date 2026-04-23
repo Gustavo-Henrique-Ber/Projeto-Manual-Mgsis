@@ -1,0 +1,2617 @@
+/* VARIÁVEIS ADICIONADAS PARA O TEMA ESCURO DO MENU LATERAL */
+:root {
+    --mgsis-color-blue: #0A4A82;
+    --mgsis-color-yellow: #FFC000;
+    --mgsis-color-green: #1A7061;
+    --mgsis-color-text: #333333;
+    --mgsis-color-bg: #FFFFFF;
+
+    /* Novas variáveis do ERP (Baseado na imagem enviada) */
+    --mgsis-sidebar-bg: #1C2434;
+    /* Fundo azul escuro profundo */
+    --mgsis-sidebar-hover: #333A48;
+    /* Cor ao passar o mouse */
+    --mgsis-sidebar-active-bg: #3C50E0;
+    /* Azul vivo do item ativo */
+    --mgsis-sidebar-text: #DEE4EE;
+    /* Texto cinza claro/branco */
+
+    --mgsis-font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mgsis-transition: 0.3s ease;
+}
+
+/* RESET GERAL (Mantido) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--mgsis-font-main);
+    background-color: #F1F5F9;
+    /* Fundo levemente cinza para destacar o conteúdo */
+}
+
+/* ----------------- CABEÇALHO SUPERIOR (Mantido e ajustado) ----------------- */
+.mgsis-header {
+    width: 100%;
+    background-color: var(--mgsis-color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mgsis-top-accent {
+    width: 100%;
+    height: 4px;
+    background-color: var(--mgsis-color-green);
+}
+
+.mgsis-container {
+    max-width: 100%;
+    /* Permitindo que espanda mais por causa do ERP */
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+    /* Reduzi um pouco a altura para otimizar espaço */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mgsis-logo-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.mgsis-logo-icon {
+    width: 28px;
+    height: 28px;
+    color: var(--mgsis-color-blue);
+}
+
+.mgsis-logo-text-blue {
+    color: var(--mgsis-color-blue);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.mgsis-logo-text-yellow {
+    color: var(--mgsis-color-yellow);
+    font-size: 22px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.mgsis-nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.mgsis-nav-link {
+    color: var(--mgsis-color-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    transition: color var(--mgsis-transition);
+}
+
+.mgsis-nav-link:hover {
+    color: var(--mgsis-color-blue);
+}
+
+.mgsis-support-action {
+    background-color: var(--mgsis-color-blue);
+    color: var(--mgsis-color-bg);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.mgsis-support-action:hover {
+    background-color: #083863;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 74, 130, 0.3);
+}
+
+.mgsis-mobile-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mgsis-mobile-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--mgsis-color-blue);
+    border-radius: 3px;
+    transition: all var(--mgsis-transition);
+    transform-origin: left center;
+}
+
+/* ----------------- ITENS OCULTOS NO DESKTOP ----------------- */
+/* Essa classe garante que o título Módulos e os links do ERP não apareçam no header do desktop */
+.mgsis-mobile-divider,
+.mgsis-mobile-only {
+    display: none;
+}
+
+/* ----------------- LAYOUT DO SISTEMA (Sidebar + Conteúdo) ----------------- */
+.mgsis-app-layout {
+    display: flex;
+    min-height: calc(100vh - 74px);
+    /* Ocupa a tela inteira menos o header */
+}
+
+/* ----------------- MENU LATERAL (SIDEBAR) ----------------- */
+.mgsis-sidebar {
+    width: 260px;
+    background-color: var(--mgsis-sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    /* Impede que a sidebar esprema */
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mgsis-sidebar-header {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mgsis-sidebar-title {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.mgsis-text-blue {
+    color: #3B82F6;
+}
+
+/* Azul do texto ERP */
+
+.mgsis-sidebar-subtitle {
+    color: #8A99AF;
+    /* Cinza suave da imagem */
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.mgsis-sidebar-menu {
+    list-style: none;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Faz o menu ocupar o espaço disponível para jogar a Ajuda pro fim */
+}
+
+.mgsis-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 24px;
+    color: var(--mgsis-sidebar-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all var(--mgsis-transition);
+}
+
+/* Efeito ao passar o mouse */
+.mgsis-sidebar-link:hover {
+    background-color: var(--mgsis-sidebar-hover);
+    color: #FFFFFF;
+}
+
+/* O item "Cadastros" que está selecionado na sua imagem */
+.mgsis-sidebar-link.active {
+    background-color: var(--mgsis-sidebar-active-bg);
+    color: #FFFFFF;
+    border-left: 4px solid #FFFFFF;
+    /* Barra branca na esquerda indicando ativo */
+}
+
+/* Empurra os últimos itens (Ajuda, Sair) para o final da tela */
+.mgsis-sidebar-spacer {
+    flex-grow: 1;
+}
+
+/* ----------------- CONTEÚDO PRINCIPAL ----------------- */
+.mgsis-main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #F1F5F9;
+}
+
+
+/* ----------------- RESPONSIVIDADE (Tablets e Celulares) ----------------- */
+@media (max-width: 768px) {
+
+    /* Mostra botão hambúrguer */
+    .mgsis-mobile-btn {
+        display: flex;
+    }
+
+    /* Esconde a Sidebar Lateral padrão no Mobile */
+    .mgsis-sidebar {
+        display: none;
+    }
+
+    /* Configura o Header Nav para virar o Menu de Tela Inteira */
+    .mgsis-navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: var(--mgsis-color-bg);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 80px 30px 40px 30px;
+        /* Espaço pro "X" em cima */
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        /* Permite rolar se houver muitos links */
+    }
+
+    .mgsis-navigation.active {
+        right: 0;
+    }
+
+    .mgsis-nav-list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .mgsis-nav-link {
+        font-size: 18px;
+        width: 100%;
+        display: block;
+    }
+
+    .mgsis-support-action {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Exibe o título 'Módulos' e os links que estavam ocultos no desktop */
+    .mgsis-mobile-divider {
+        display: block;
+        width: 100%;
+        color: #8A99AF;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        margin-bottom: -5px;
+        border-bottom: 1px solid #E2E8F0;
+        padding-bottom: 8px;
+    }
+
+    .mgsis-mobile-only {
+        display: block;
+        width: 100%;
+    }
+
+    /* Estiliza os links dos módulos dentro do menu mobile */
+    .mgsis-mobile-module-link {
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 16px;
+        color: var(--mgsis-color-text);
+        background-color: #F8FAFC;
+    }
+
+    .mgsis-mobile-module-link.active {
+        background-color: rgba(59, 130, 246, 0.1);
+        color: var(--mgsis-sidebar-active-bg);
+        font-weight: 700;
+        border-left: 4px solid var(--mgsis-sidebar-active-bg);
+    }
+
+    /* Animação do X */
+    .mgsis-mobile-btn.active .mgsis-mobile-line:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .mgsis-mobile-btn.active .mgsis-mobile-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mgsis-mobile-btn.active .mgsis-mobile-line:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+}
+
+/* --- FUNDO E ALINHAMENTO GERAL --- */
+.mgsis-cadastros-centro {
+    background-color: #F8FAFC;
+    /* Fundo branco/azulado da imagem */
+    padding: 50px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* Centraliza TUDO na página */
+}
+
+/* --- TÍTULOS --- */
+.mgsis-titulos-centro h2 {
+    color: #1E293B;
+    /* Azul marinho muito escuro */
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mgsis-titulos-centro p {
+    color: #64748B;
+    /* Cinza médio */
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* --- GRID PERFEITAMENTE CENTRALIZADA --- */
+.mgsis-grid-centralizada {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebrar a linha */
+    justify-content: center;
+    /* Mantém os itens no meio da tela */
+    gap: 16px;
+    /* Espaçamento idêntico à imagem */
+
+    /* O SEGREDO: Essa largura exata garante que caibam 6 cards na primeira linha.
+       O 7º (Segmento) é obrigado a descer, ficando os 3 últimos no centro! */
+    max-width: 880px;
+    margin: 0 auto;
+    /* Centraliza o bloco inteiro no meio da página */
+}
+
+/* --- CARD (QUADRADO BRANCO) --- */
+.mgsis-card-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    /* Borda bem sutil e clarinha */
+    border-radius: 10px;
+    /* Cantos arredondados iguais à foto */
+    width: 125px;
+    /* Largura idêntica à proporção da imagem */
+    height: 125px;
+    /* Altura idêntica */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    position: relative;
+    /* Necessário para prender a setinha na parte de baixo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    /* Sombra quase invisível */
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+.mgsis-card-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    border-color: #CBD5E1;
+}
+
+/* --- ÍCONES --- */
+.mgsis-icon-box {
+    width: 38px;
+    height: 38px;
+    fill: #334155;
+    /* Cor cinza/chumbo da imagem original */
+    margin-bottom: 12px;
+}
+
+/* --- TEXTO DOS CARDS --- */
+.mgsis-card-box span {
+    color: #1E293B;
+    /* Cor escura do texto */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* --- SETINHA (Triângulo cinza) --- */
+.mgsis-seta-baixo {
+    position: absolute;
+    /* Prende a seta no card */
+    bottom: 12px;
+    /* Distância do fundo */
+
+    /* Desenha a seta usando apenas CSS puro */
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #CBD5E1;
+    /* Triângulo cinza apontando para baixo */
+}
+
+/* --- RESPONSIVIDADE (Telas menores) --- */
+@media (max-width: 850px) {
+    .mgsis-grid-centralizada {
+        max-width: 580px;
+        /* Força 4 cards em cima e os demais centralizados embaixo */
+    }
+}
+
+@media (max-width: 500px) {
+    .mgsis-card-box {
+        width: 100px;
+        /* Diminui para caber 3 por linha em celulares */
+        height: 100px;
+    }
+
+    .mgsis-icon-box {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mgsis-card-box span {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   CARDS PREMIUM (Preparo para o Efeito 3D)
+   ========================================= */
+
+/* Container precisa de perspectiva para o 3D funcionar */
+.mgsis-grid-centralizada {
+    perspective: 1000px;
+}
+
+.mgsis-card-box {
+    /* Entrada super rápida e seca, sem ficar esperando */
+    animation: mgsis-quick-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+    transform-style: preserve-3d;
+    will-change: transform;
+    /* Otimiza a renderização no navegador */
+}
+
+/* Efeito de Clique Seco e Rápido */
+.mgsis-card-box:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s !important;
+}
+
+/* Entrada em cascata muito mais rápida (Max 0.28s de espera) */
+.mgsis-card-box:nth-child(1) {
+    animation-delay: 0.00s;
+}
+
+.mgsis-card-box:nth-child(2) {
+    animation-delay: 0.04s;
+}
+
+.mgsis-card-box:nth-child(3) {
+    animation-delay: 0.08s;
+}
+
+.mgsis-card-box:nth-child(4) {
+    animation-delay: 0.12s;
+}
+
+.mgsis-card-box:nth-child(5) {
+    animation-delay: 0.16s;
+}
+
+.mgsis-card-box:nth-child(6) {
+    animation-delay: 0.20s;
+}
+
+.mgsis-card-box:nth-child(7) {
+    animation-delay: 0.24s;
+}
+
+.mgsis-card-box:nth-child(8) {
+    animation-delay: 0.28s;
+}
+
+@keyframes mgsis-quick-enter {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================
+   MODO FOCO (Transição de Clique)
+   ========================================= */
+
+/* Classe aplicada aos cards que vão desaparecer */
+.mgsis-card-sumir {
+    opacity: 0 !important;
+    transform: scale(0.8) translateY(20px) !important;
+    /* Encolhe e cai suavemente */
+    pointer-events: none;
+    /* Desativa cliques nos outros */
+    filter: blur(4px);
+    /* Dá um desfoque elegante enquanto some */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Classe aplicada ao card que foi clicado */
+.mgsis-card-focado {
+    transform: scale(1.1) translateZ(40px) !important;
+    /* Cresce e vem para frente */
+    box-shadow: 0 20px 40px rgba(33, 136, 234, 0.25) !important;
+    /* Brilho azul forte */
+    border-color: var(--azul-primario, #2188ea) !important;
+    z-index: 100 !important;
+    pointer-events: none;
+    /* Evita duplo clique acidental */
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+/* Deixa a cor do ícone ativa permanentemente quando focado */
+.mgsis-card-focado .mgsis-icon-box {
+    transform: scale(1.2) !important;
+    color: var(--azul-primario, #2188ea) !important;
+    transition: all 0.4s ease !important;
+}
+
+
+/* ========================================== */
+/* TELA 2: DETALHES DO PRODUTO                */
+/* ========================================== */
+
+/* --- CLASSES PARA TROCA DE TELAS (Ocultar e Mostrar) --- */
+.mgsis-view-hidden {
+    display: none !important;
+}
+
+.mgsis-view-active {
+    display: block;
+    animation: fadeInPage 0.4s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- CONTAINER GERAL DA PÁGINA --- */
+.mgsis-detalhes-page {
+    background-color: #F8FAFC;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: calc(100vh - 80px);
+    /* Preenche a tela tirando o header superior */
+}
+
+/* --- BOTÃO VOLTAR --- */
+.mgsis-voltar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mgsis-btn-voltar {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.mgsis-btn-voltar:hover {
+    color: #1E293B;
+}
+
+/* --- CABEÇALHO --- */
+.mgsis-detalhes-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mgsis-detalhes-titulo {
+    color: #1E293B;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.mgsis-detalhes-subtitulo {
+    color: #64748B;
+    font-size: 15px;
+}
+
+/* --- GRID DE CARDS (3 COLUNAS) --- */
+.mgsis-grid-detalhes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* --- ESTILO DE CADA CARD --- */
+.mgsis-card-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mgsis-card-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* --- TOPO DO CARD (ÍCONE + TÍTULO) --- */
+.mgsis-card-item-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.mgsis-card-item-icon {
+    width: 28px;
+    height: 28px;
+    color: #334155;
+}
+
+.mgsis-card-item-header h3 {
+    color: #1E293B;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* --- CORPO DO CARD (TEXTO EXPLICATIVO) --- */
+.mgsis-card-item-texto {
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Empurra o link para baixo */
+}
+
+/* --- RODAPÉ DO CARD (LINK ACESSAR) --- */
+.mgsis-card-item-link {
+    color: #0A4A82;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mgsis-card-item-link:hover {
+    color: #3B82F6;
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVIDADE (Tablets e Celulares) --- */
+@media (max-width: 900px) {
+    .mgsis-grid-detalhes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mgsis-grid-detalhes {
+        grid-template-columns: 1fr;
+    }
+
+    .mgsis-detalhes-page {
+        padding: 20px 15px;
+    }
+}
+
+/* ========================================== */
+/* ESTILOS DO RODAPÉ COMPACTO                 */
+/* ========================================== */
+
+.mgsis-footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-top: auto;
+}
+
+.mgsis-footer-accent {
+    width: 100%;
+    height: 4px;
+    background-color: #1A7061;
+}
+
+/* Reduzi o max-width e o padding drasticamente */
+.mgsis-footer-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    /* Era 50px de altura, agora é 30px */
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    /* Menos espaço entre as colunas */
+}
+
+.mgsis-footer-col {
+    flex: 1;
+    min-width: 200px;
+    /* Reduzi o tamanho mínimo da coluna */
+}
+
+/* Ajustes no Logo e Descrição */
+.mgsis-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    /* Espaço menor */
+}
+
+/* Logo menor */
+.mgsis-footer-logo svg {
+    width: 24px;
+    height: 24px;
+}
+
+.mgsis-logo-text-blue {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0A4A82;
+}
+
+.mgsis-logo-text-yellow {
+    font-size: 18px;
+    font-weight: 800;
+    font-style: italic;
+    color: #FFC000;
+}
+
+.mgsis-footer-desc {
+    color: #64748B;
+    font-size: 13px;
+    /* Fonte menor */
+    line-height: 1.4;
+    /* Linhas mais justas */
+}
+
+/* Títulos mais discretos */
+.mgsis-footer-title {
+    color: #1E293B;
+    font-size: 14px;
+    /* Fonte menor */
+    font-weight: 700;
+    margin-bottom: 12px;
+    /* Menos espaço abaixo do título */
+    text-transform: uppercase;
+}
+
+.mgsis-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mgsis-footer-links li {
+    margin-bottom: 8px;
+    /* Links mais coladinhos */
+}
+
+.mgsis-footer-links a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 13px;
+    /* Fonte menor nos links */
+    font-weight: 500;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.mgsis-footer-links a:hover {
+    color: #0A4A82;
+    transform: translateX(4px);
+}
+
+/* Barra Inferior (Copyright) muito mais enxuta */
+.mgsis-footer-bottom {
+    background-color: #F8FAFC;
+    text-align: center;
+    padding: 12px;
+    /* Muito menos padding aqui */
+    border-top: 1px solid #E2E8F0;
+}
+
+.mgsis-footer-bottom p {
+    color: #94A3B8;
+    font-size: 12px;
+    /* Letra miudinha */
+    margin: 0;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .mgsis-footer-container {
+        flex-direction: column;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .mgsis-footer-col {
+        text-align: center;
+    }
+
+    .mgsis-footer-logo {
+        justify-content: center;
+    }
+}
+
+/* ========================================== */
+/* ESTILOS DA TELA DE DETALHES (EMPRESA/CLIENTE) */
+/* ========================================== */
+
+/* Bloco branco central para o texto */
+.mgsis-conteudo-documentacao {
+    background-color: #FFFFFF;
+    max-width: 800px;
+    /* Largura focada para leitura agradável */
+    margin: 0 auto;
+    /* Centraliza na tela */
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Ícone centralizado no topo do texto */
+.mgsis-header-icone {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mgsis-header-icone svg {
+    width: 54px;
+    height: 54px;
+    color: #0A4A82;
+    /* Azul escuro do ERP */
+    background-color: #F8FAFC;
+    /* Fundo bem clarinho */
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #E2E8F0;
+}
+
+/* Textos dentro da documentação */
+.mgsis-conteudo-documentacao h3 {
+    color: #1E293B;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-align: center;
+    /* Centraliza o título principal */
+}
+
+.mgsis-conteudo-documentacao p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: center;
+    /* Centraliza a descrição */
+    color: #475569;
+}
+
+/* Linha separadora */
+.mgsis-divisor {
+    border: 0;
+    height: 1px;
+    background-color: #E2E8F0;
+    margin: 35px 0;
+}
+
+/* --- ÁREA DE IMAGENS --- */
+.mgsis-area-imagens {
+    text-align: center;
+}
+
+.mgsis-area-imagens h4 {
+    color: #1E293B;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.mgsis-area-imagens p {
+    font-size: 14px;
+    color: #64748B;
+    margin-bottom: 20px;
+}
+
+/* Botão de Adicionar Imagens */
+.mgsis-btn-adicionar-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    background-color: #F8FAFC;
+    border: 2px dashed #CBD5E1;
+    /* Borda tracejada estilo área de upload */
+    border-radius: 8px;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mgsis-btn-adicionar-imagem:hover {
+    background-color: #F1F5F9;
+    border-color: #94A3B8;
+    color: #1E293B;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+    .mgsis-conteudo-documentacao {
+        padding: 25px 20px;
+    }
+}
+
+/* ========================================== */
+/* COMPONENTE: GUIA DE USO DA TELA            */
+/* ========================================== */
+
+.mgsis-guia-caixa {
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    margin: 25px 0;
+    overflow: hidden;
+    /* Mantém os cantos arredondados limpos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Cabeçalho do Guia */
+.mgsis-guia-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #E2E8F0;
+    cursor: pointer;
+}
+
+.mgsis-guia-titulo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0A4A82;
+    /* Azul escuro corporativo */
+}
+
+.mgsis-guia-titulo-area h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Corpo do Guia */
+.mgsis-guia-corpo {
+    padding: 20px;
+}
+
+/* Texto Introdutório */
+p.mgsis-guia-intro {
+    color: #64748B;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Grid de Informações */
+.mgsis-guia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Duas colunas lado a lado */
+    row-gap: 25px;
+    column-gap: 30px;
+}
+
+/* Cada item individual (Ícone + Texto) */
+.mgsis-guia-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Caixinha do Ícone */
+.mgsis-guia-icone {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    /* Impede o ícone de amassar se o texto for muito grande */
+}
+
+.mgsis-guia-icone svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Cores específicas dos ícones baseadas na sua imagem */
+.mgsis-bg-azul {
+    background-color: #2563EB;
+}
+
+/* Azul mais forte (Pesquisar) */
+.mgsis-bg-azul-claro {
+    background-color: #3B82F6;
+}
+
+/* Azul padrão (Restante) */
+.mgsis-bg-vermelho {
+    background-color: #EF4444;
+}
+
+/* Vermelho (Excluir) */
+
+/* Textos da explicação */
+.mgsis-guia-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.mgsis-guia-texto strong {
+    color: #1E293B;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.mgsis-guia-texto span {
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVIDADE: Muda para 1 coluna no celular */
+@media (max-width: 768px) {
+    .mgsis-guia-grid {
+        grid-template-columns: 1fr;
+        /* Uma coluna só */
+    }
+}
+
+/* Botão que controla o Guia */
+.mgsis-btn-toggle-guia {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 10px;
+}
+
+.mgsis-btn-toggle-guia:hover {
+    background-color: #F8FAFC;
+    border-color: #CBD5E1;
+}
+
+/* Seta animada */
+.mgsis-seta-icon {
+    transition: transform 0.3s ease;
+    color: #64748B;
+}
+
+.mgsis-btn-toggle-guia.active .mgsis-seta-icon {
+    transform: rotate(180deg);
+}
+
+/* Esconde o corpo por padrão */
+.mgsis-conteudo-oculto {
+    display: none;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.mgsis-conteudo-oculto.show {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid Lado a Lado compacta */
+.mgsis-guia-grid.side-by-side {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* --- CABEÇALHO DA ÁREA DE IMAGENS CENTRALIZADO --- */
+.mgsis-area-imagens {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #E2E8F0;
+    text-align: center;
+    /* Centraliza o conteúdo de texto da sessão */
+}
+
+.mgsis-area-header {
+    max-width: 700px;
+    /* Limita a largura para o texto não ficar espalhado demais */
+    margin: 0 auto 30px auto;
+    /* Centraliza o bloco e dá espaço para a galeria */
+}
+
+.mgsis-area-header h4 {
+    color: #1E293B;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.mgsis-area-header p {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    /* Espaçamento agora é controlado pelo margin do header */
+}
+
+/* --- GRID DINÂMICA E CENTRALIZADA --- */
+.mgsis-galeria-grid {
+    display: flex;
+    /* Mudamos de grid para flex */
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas menores */
+    justify-content: center;
+    /* ESTA LINHA CENTRALIZA TUDO NO MEIO */
+    gap: 20px;
+    /* Espaço entre os cards */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- AJUSTE NO CARD PARA NÃO ESTICAR DEMAIS --- */
+.mgsis-img-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    /* Largura definida para os cards não ficarem gigantes quando houver apenas um */
+    width: 100%;
+    max-width: 300px;
+    flex: 0 1 auto;
+    /* Permite que o card mantenha seu tamanho ideal */
+}
+
+/* Mantendo o efeito de elevação */
+.mgsis-img-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Ajuste para garantir que a imagem ocupe o espaço corretamente */
+.mgsis-img-wrapper {
+    position: relative;
+    height: 180px;
+    /* Aumentei um pouco a altura para preencher melhor o card maior */
+    overflow: hidden;
+    background-color: #F1F5F9;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .mgsis-img-card {
+        max-width: 100%;
+        /* No celular ele ocupa a largura toda */
+    }
+}
+
+.mgsis-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Recorta a imagem para preencher o espaço sem deformar */
+    transition: transform 0.5s ease;
+    /* Animação suave de zoom */
+}
+
+/* Overlay Azul (Escurecer ao passar o mouse) */
+.mgsis-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 74, 130, 0.75);
+    /* Azul do seu sistema com transparência */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    /* Invisível por padrão */
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.mgsis-img-overlay svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.mgsis-img-overlay span {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Ativação do Hover no Card */
+.mgsis-img-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Zoom na imagem */
+.mgsis-img-card:hover .mgsis-img-overlay {
+    opacity: 1;
+}
+
+/* Mostra o overlay azul */
+
+/* Informações abaixo da imagem */
+.mgsis-img-info {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #E2E8F0;
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    /* Garante que o rodapé alinhe mesmo com textos de tamanhos diferentes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mgsis-img-info span {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* --- ESTILO DO MODAL (LIGHTBOX) --- */
+.mgsis-modal {
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    z-index: 2000;
+    /* Acima de tudo */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fundo preto transparente */
+    overflow: auto;
+}
+
+/* Imagem dentro do Modal */
+.mgsis-modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 8px;
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Botão Fechar */
+.mgsis-modal-fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Legenda da Imagem */
+#mgsis-modal-legenda {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+/* Botão de Toggle (Abrir/Fechar) */
+.mgsis-btn-toggle-galeria {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #1E293B;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s;
+    margin: 20px 0;
+}
+
+.mgsis-btn-toggle-galeria:hover {
+    background-color: #F8FAFC;
+    border-color: #CBD5E1;
+}
+
+.mgsis-seta-icon {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    /* Joga a seta para a direita */
+    color: #64748B;
+}
+
+/* Estado Ativo do botão */
+.mgsis-btn-toggle-galeria.active .mgsis-seta-icon {
+    transform: rotate(180deg);
+}
+
+/* Controle de visibilidade */
+.mgsis-conteudo-oculto {
+    display: none;
+    animation: slideDown 0.3s ease-out;
+}
+
+.mgsis-conteudo-oculto.show {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CONTAINER DAS ABAS */
+.mgsis-abas-container {
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* CABEÇALHO (Onde ficam os botões) */
+.mgsis-abas-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    border-bottom: 2px solid #1E88E5;
+    /* --- ADICIONADO PARA CENTRALIZAR --- */
+    justify-content: center;
+}
+
+/* ESTILO DO BOTÃO (Idêntico à foto) */
+.mgsis-tab-btn {
+    background-color: #42A5F5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.2s;
+    /* Ajuste para evitar que os botões estiquem no flex */
+    flex: 0 1 auto;
+}
+
+.mgsis-tab-btn:hover {
+    background-color: #1E88E5;
+}
+
+/* ABA ATIVA (Selecionada) */
+.mgsis-tab-btn.active {
+    background-color: #1565C0;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ÁREA DO CONTEÚDO */
+.mgsis-abas-content {
+    background-color: #f8fafc;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    text-align: left;
+}
+
+/* Lógica de esconder/mostrar */
+.mgsis-tab-pane {
+    display: none;
+    animation: fadeInTab 0.3s ease;
+}
+
+.mgsis-tab-pane.active {
+    display: block;
+}
+
+.mgsis-tab-pane h5 {
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVIDADE CELULAR */
+@media (max-width: 600px) {
+    .mgsis-tab-btn {
+        /* No mobile, removemos a centralização rígida para preencher a tela */
+        flex: 1 1 auto;
+        padding: 10px 5px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+}
+
+/* Container isolado */
+.mgsis-aba-img-container {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Botão exclusivo das abas */
+.mgsis-aba-img-btn-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #374151;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.mgsis-aba-img-btn-toggle:hover {
+    background-color: #f3f4f6;
+}
+
+.mgsis-aba-img-seta {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+/* Quando estiver aberto */
+.mgsis-aba-img-btn-toggle.mgsis-aba-img-active .mgsis-aba-img-seta {
+    transform: rotate(180deg);
+}
+
+/* Galeria oculta */
+.mgsis-aba-img-hidden {
+    display: none;
+    padding: 20px 0;
+    animation: mgsisFadeDown 0.3s ease;
+}
+
+.mgsis-aba-img-hidden.mgsis-aba-img-show {
+    display: block !important;
+}
+
+@keyframes mgsisFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================== */
+/* TELA DE INÍCIO - APRESENTAÇÃO              */
+/* ========================================== */
+
+.mgsis-inicio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* --- HERO BANNER (Destaque Superior) --- */
+.mgsis-hero-banner {
+    background: linear-gradient(135deg, #0A4A82 0%, #1E88E5 100%);
+    border-radius: 16px;
+    padding: 50px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(30, 136, 229, 0.2);
+    margin-bottom: 50px;
+}
+
+.mgsis-hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.mgsis-hero-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.mgsis-hero-conteudo h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.mgsis-text-destaque {
+    color: #93C5FD;
+    /* Azul bem clarinho para dar contraste */
+}
+
+.mgsis-hero-conteudo p {
+    font-size: 16px;
+    color: #E2E8F0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botões do Hero */
+.mgsis-hero-botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.mgsis-btn-primario {
+    background-color: #FFFFFF;
+    color: #0A4A82;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mgsis-btn-primario:hover {
+    background-color: #F1F5F9;
+    transform: translateY(-2px);
+}
+
+.mgsis-btn-secundario {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.mgsis-btn-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ilustração de Fundo */
+.mgsis-hero-ilustracao {
+    position: absolute;
+    right: -20px;
+    top: -50px;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* --- FILOSOFIA DOS MÓDULOS --- */
+.mgsis-filosofia-modulos {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mgsis-filosofia-header {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+}
+
+.mgsis-filosofia-header h2 {
+    font-size: 28px;
+    color: #1E293B;
+    margin-bottom: 15px;
+}
+
+.mgsis-filosofia-header p {
+    color: #64748B;
+    line-height: 1.6;
+}
+
+/* Cards de Benefícios */
+.mgsis-cards-beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.mgsis-card-ben {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.mgsis-card-ben:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #CBD5E1;
+}
+
+.mgsis-ben-icone {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    color: white;
+}
+
+.mgsis-ben-icone svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* Cores dos Ícones */
+.mgsis-bg-azul {
+    background-color: #3B82F6;
+}
+
+.mgsis-bg-verde {
+    background-color: #10B981;
+}
+
+.mgsis-bg-roxo {
+    background-color: #8B5CF6;
+}
+
+.mgsis-card-ben h4 {
+    color: #1E293B;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.mgsis-card-ben p {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- GUIA RÁPIDO (Como usar) --- */
+.mgsis-guia-rapido {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.mgsis-guia-rapido h3 {
+    text-align: center;
+    color: #1E293B;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.mgsis-passos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.mgsis-passo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.mgsis-passo-numero {
+    background-color: #1E88E5;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.mgsis-passo-item p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* ========================================== */
+/* RESPONSIVIDADE (CELULARES E TABLETS)       */
+/* ========================================== */
+@media (max-width: 900px) {
+    .mgsis-cards-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .mgsis-passos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mgsis-hero-banner {
+        flex-direction: column;
+        padding: 35px 25px;
+        text-align: center;
+    }
+
+    .mgsis-hero-botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mgsis-btn-primario,
+    .mgsis-btn-secundario {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mgsis-hero-ilustracao {
+        display: none;
+        /* Esconde a arte no celular para focar no texto */
+    }
+
+    .mgsis-hero-conteudo h1 {
+        font-size: 28px;
+    }
+}
+
+/* ========================================== */
+/* PÁGINA DE AJUDA - DESIGN DINÂMICO          */
+/* ========================================== */
+
+.mgsis-ajuda-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- Cabeçalho --- */
+.mgsis-ajuda-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mgsis-ajuda-header h1 {
+    font-size: 32px;
+    color: #1E293B;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.mgsis-ajuda-header p {
+    font-size: 16px;
+    color: #64748B;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Navegação em Pílulas (Tabs Dinâmicas) --- */
+.mgsis-categorias-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.mgsis-cat-btn {
+    background-color: #F1F5F9;
+    color: #475569;
+    border: 1px solid #E2E8F0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    /* Efeito "Pílula" */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mgsis-cat-btn:hover {
+    background-color: #E2E8F0;
+    transform: translateY(-2px);
+}
+
+.mgsis-cat-btn.active {
+    background-color: #1E88E5;
+    color: white;
+    border-color: #1E88E5;
+    box-shadow: 0 4px 10px rgba(30, 136, 229, 0.3);
+}
+
+/* --- Grid de Cards (2 colunas no Desktop) --- */
+.mgsis-solucoes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.mgsis-faq-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* Animação para quando filtrar as categorias */
+    animation: fadeInCard 0.4s ease forwards;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mgsis-faq-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #CBD5E1;
+}
+
+/* Pergunta (O Botão de Clicar) */
+.mgsis-faq-pergunta {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 600;
+    color: #1E293B;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.mgsis-faq-pergunta:hover {
+    color: #1E88E5;
+}
+
+.mgsis-faq-pergunta svg {
+    width: 20px;
+    height: 20px;
+    color: #94A3B8;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+/* Resposta (Oculta por padrão) */
+.mgsis-faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #F8FAFC;
+    transition: max-height 0.4s ease;
+}
+
+.mgsis-faq-resposta p {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Estado Ativo (Aberta) */
+.mgsis-faq-card.open {
+    border-color: #1E88E5;
+    background-color: #F8FAFC;
+}
+
+.mgsis-faq-card.open .mgsis-faq-pergunta {
+    color: #1E88E5;
+}
+
+.mgsis-faq-card.open .mgsis-faq-pergunta svg {
+    transform: rotate(180deg);
+    color: #1E88E5;
+}
+
+/* --- Rodapé de Ajuda (Call to Action) --- */
+.mgsis-ajuda-footer {
+    margin-top: 60px;
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.mgsis-ajuda-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.mgsis-ajuda-footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mgsis-ajuda-footer p {
+    color: #94A3B8;
+    margin-bottom: 25px;
+}
+
+.mgsis-btn-suporte-direto {
+    background-color: #1E88E5;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mgsis-btn-suporte-direto:hover {
+    background-color: #1565C0;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+    .mgsis-solucoes-grid {
+        grid-template-columns: 1fr;
+        /* Volta para 1 coluna no celular */
+    }
+
+    .mgsis-categorias-nav {
+        gap: 8px;
+    }
+
+    .mgsis-cat-btn {
+        padding: 8px 15px;
+        font-size: 13px;
+        flex: 1 1 auto;
+        /* Pílulas se ajustam ao tamanho da tela */
+        text-align: center;
+    }
+}
+
+/* ========================================== */
+/* ESTILOS DA ABA DE DOCUMENTAÇÃO (DADOS)     */
+/* ========================================== */
+
+.mgsis-aba-cabecalho {
+    margin-bottom: 25px;
+}
+
+.mgsis-aba-cabecalho h5 {
+    font-size: 20px;
+    color: #0A4A82;
+    /* Azul Escuro */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.mgsis-aba-cabecalho p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* --- Caixa de Dica/Alerta --- */
+.mgsis-alerta-info {
+    background-color: #F0F9FF;
+    border-left: 4px solid #0EA5E9;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mgsis-alerta-icone {
+    color: #0EA5E9;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.mgsis-alerta-icone svg {
+    width: 24px;
+    height: 24px;
+}
+
+.mgsis-alerta-texto {
+    color: #0F172A;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mgsis-alerta-texto span {
+    background-color: #1E88E5;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* --- Grid de Explicações (Cards) --- */
+.mgsis-doc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas lado a lado */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mgsis-doc-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mgsis-doc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    border-color: #CBD5E1;
+}
+
+.mgsis-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F1F5F9;
+    padding-bottom: 12px;
+}
+
+.mgsis-icon-wrapper {
+    background-color: #E0F2FE;
+    color: #0284C7;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mgsis-icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+}
+
+.mgsis-card-header h6 {
+    font-size: 16px;
+    color: #1E293B;
+    font-weight: 700;
+    margin: 0;
+}
+
+.mgsis-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mgsis-campo-linha {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.mgsis-campo-nome {
+    font-weight: 700;
+    color: #334155;
+    background-color: #F8FAFC;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+    border: 1px solid #F1F5F9;
+}
+
+.mgsis-campo-desc {
+    color: #64748B;
+}
+
+/* Responsividade para Monitores Menores e Celulares */
+@media (max-width: 850px) {
+    .mgsis-doc-grid {
+        grid-template-columns: 1fr;
+        /* Muda para 1 coluna */
+    }
+}
+
+/* =========================================
+   BOTÃO DE TOGGLE GENÉRICO E ANIMAÇÃO (Nomes Exclusivos MGSIS)
+   ========================================= */
+.mgsis-painel-dinamico-btn {
+    width: 100%;
+    background-color: #f8fafd;
+    border: 1px solid #d0def0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--azul-primario);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.mgsis-painel-dinamico-btn:hover {
+    background-color: #eaf1f8;
+    border-color: var(--azul-primario);
+}
+
+.mgsis-painel-dinamico-seta {
+    transition: transform 0.4s ease;
+}
+
+/* Gira a setinha quando estiver ativo */
+.mgsis-painel-dinamico-aberto .mgsis-painel-dinamico-seta {
+    transform: rotate(180deg);
+}
+
+/* O container que esconde o conteúdo */
+.mgsis-painel-dinamico-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Div interna para garantir que o padding não quebre a animação */
+.mgsis-painel-dinamico-inner {
+    padding-bottom: 20px;
+}
+
+/* =========================================
+   LISTA DE ATALHOS DO TECLADO (Menu de Contexto)
+   ========================================= */
+.mgsis-atalhos-container {
+    background-color: var(--fundo-branco);
+    border: 1px solid #edf1f5;
+    border-radius: 8px;
+    padding: 5px 0;
+    margin-top: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.mgsis-atalho-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f4f6f8;
+    transition: background-color 0.2s;
+}
+
+.mgsis-atalho-item:hover {
+    background-color: #f8fafd;
+}
+
+.mgsis-atalho-item:last-child {
+    border-bottom: none;
+}
+
+.mgsis-atalho-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mgsis-atalho-texto {
+    font-size: 15px;
+    color: var(--texto-escuro);
+}
+
+/* Cores dos ícones baseadas na imagem */
+.mgsis-atalho-esquerda i {
+    font-size: 16px;
+    width: 16px;
+    text-align: center;
+}
+
+.mgsis-icone-verde {
+    color: #5cb85c;
+}
+
+.mgsis-icone-azul {
+    color: #337ab7;
+}
+
+.mgsis-icone-vermelho {
+    color: #d9534f;
+}
+
+.mgsis-icone-cinza {
+    color: #777777;
+}
+
+/* Estilo do botãozinho de tecla do atalho (ex: Alt+C) */
+.mgsis-atalho-tecla {
+    background-color: #f1f3f5;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    font-size: 12px;
+    font-family: monospace;
+    /* Fonte com estilo de código/teclado */
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajuste no alinhamento da esquerda para suportar duas linhas de texto */
+.mgsis-atalho-esquerda {
+    display: flex;
+    align-items: flex-start;
+    /* Muda de center para flex-start (alinha no topo) */
+    gap: 12px;
+}
+
+/* Espaçamento do ícone para alinhar com a primeira linha de texto */
+.mgsis-atalho-esquerda i {
+    font-size: 16px;
+    width: 16px;
+    text-align: center;
+    margin-top: 3px;
+    /* Empurra o ícone um pouquinho pra baixo para alinhar com o título */
+}
+
+/* Novo container para empilhar o Título e a Descrição */
+.mgsis-atalho-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.mgsis-atalho-texto {
+    font-size: 15px;
+    font-weight: 600;
+    /* Deixa o título em negrito para destacar */
+    color: var(--texto-escuro);
+}
+
+/* O estilo da nova descrição informativa */
+.mgsis-atalho-desc {
+    font-size: 13px;
+    color: var(--texto-cinza);
+    line-height: 1.4;
+}
+
+/* =========================================
+   LINHA DO TEMPO (Timeline de Processos)
+   ========================================= */
+.mgsis-timeline-wrapper {
+    background-color: var(--fundo-branco);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #edf1f5;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.mgsis-timeline-titulo {
+    font-size: 16px;
+    color: var(--texto-escuro);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.mgsis-timeline-container {
+    position: relative;
+    padding-left: 30px;
+    /* Espaço para a linha e os ícones */
+}
+
+/* A Linha Vertical que liga tudo */
+.mgsis-timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 14px;
+    /* Posiciona exatamente no meio das bolinhas */
+    height: 100%;
+    width: 2px;
+    background-color: #e0e5eb;
+    /* Cor da linha */
+}
+
+.mgsis-timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Remove a linha extra depois do último item */
+.mgsis-timeline-ultimo {
+    margin-bottom: 0;
+}
+
+.mgsis-timeline-ultimo::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -16px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--fundo-branco);
+    /* Esconde a linha que sobrar */
+}
+
+/* As Bolinhas Numeradas */
+.mgsis-timeline-icone {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    /* Joga a bolinha para cima da linha vertical */
+    width: 30px;
+    height: 30px;
+    background-color: #f0f6fc;
+    border: 2px solid var(--azul-primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--azul-primario);
+    z-index: 2;
+    /* Fica por cima da linha */
+}
+
+/* Bolinha final de sucesso (Verde) */
+.mgsis-icone-sucesso {
+    background-color: #e6f4ea;
+    border-color: #34a853;
+    color: #34a853;
+}
+
+/* Caixa de conteúdo ao lado da bolinha */
+.mgsis-timeline-conteudo {
+    padding-top: 4px;
+}
+
+.mgsis-timeline-passo-titulo {
+    font-size: 15px;
+    color: var(--texto-escuro);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.mgsis-timeline-conteudo p {
+    font-size: 14px;
+    color: var(--texto-cinza);
+    line-height: 1.5;
+}
+
+.mgsis-timeline-conteudo strong {
+    color: var(--texto-escuro);
+}
+
+/* =========================================
+   BOTÃO VOLTAR AO TOPO (Visual e Animação)
+   ========================================= */
+.mgsis-btn-voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--azul-primario, #2188ea);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(33, 136, 234, 0.4);
+    z-index: 9999;
+
+    /* Estado Oculto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+    /* Não atrapalha quando invisível */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mgsis-btn-voltar-topo svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.mgsis-btn-voltar-topo:hover {
+    background-color: #176fc4;
+    box-shadow: 0 6px 16px rgba(33, 136, 234, 0.6);
+}
+
+.mgsis-btn-voltar-topo:hover svg {
+    transform: translateY(-3px);
+}
+
+/* Classe ativada pelo JS para mostrar o botão */
+.mgsis-btn-voltar-topo.mgsis-mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    /* Volta a ser clicável */
+}
+
