@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema MGSIS</title>
+    <link rel="stylesheet" href="../Estilizacoes/Manual.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="mgsis-header" id="mgsis-main-header">
+        <div class="mgsis-top-accent"></div>
+        <div class="mgsis-container">
+
+            <a href="#" class="mgsis-logo-wrapper">
+                <svg class="mgsis-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM11 19.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.15.56 5.76 2.8 6.64 5.77l-6.64-2.28V4.07zm6.81 7.21L13 13.62v-4.14l6.81-1.67v3.47zm-6.81 8.65v-4.14l6.81 1.67c-.88 2.97-3.49 5.21-6.64 5.77l-.17-3.3z" />
+                </svg>
+                <span class="mgsis-logo-text-blue">MG</span>
+                <span class="mgsis-logo-text-yellow">SIS</span>
+            </a>
+
+            <button class="mgsis-mobile-btn" id="mgsis-toggle-btn" aria-label="Abrir menu de navegação">
+                <span class="mgsis-mobile-line"></span>
+                <span class="mgsis-mobile-line"></span>
+                <span class="mgsis-mobile-line"></span>
+            </button>
+
+            <nav class="mgsis-navigation" id="mgsis-nav-menu">
+                <ul class="mgsis-nav-list">
+                    <li class="mgsis-nav-item"><a href="#" class="mgsis-nav-link">Início</a></li>
+                    <li class="mgsis-nav-item"><a href="#" class="mgsis-nav-link">Dúvidas</a></li>
+                    <li class="mgsis-nav-item"><a href="#" class="mgsis-support-action">Suporte</a></li>
+
+                    <li class="mgsis-mobile-divider">MÓDULOS DO SISTEMA</li>
+
+                    <li class="mgsis-nav-item mgsis-mobile-only">
+                        <a href="../Paginas-Cadastro/cadastro.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Cadastros</a>
+                    </li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Estoque/estoque.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Estoque</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Vendas/vendas.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Vendas</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a
+                            href="../Paginas-Ordem de servico/ordem_servico.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link active">Ordem de Serviço</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Compras/compras.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Compras</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Financeiro/financeiro.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Financeiro</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Relatorios/relatorios.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Relatórios</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Utilitarios/utilitarios.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Utilitários</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Ajuda/ajuda.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Ajuda</a></li>
+                    <li class="mgsis-nav-item mgsis-mobile-only"><a href="../Paginas-Sair/sair.html"
+                            class="mgsis-nav-link mgsis-mobile-module-link">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="mgsis-app-layout">
+
+        <aside class="mgsis-sidebar">
+            <div class="mgsis-sidebar-header">
+                <h2 class="mgsis-sidebar-title">SISTEMA <span class="mgsis-text-blue">ERP</span></h2>
+                <p class="mgsis-sidebar-subtitle">Manual do Usuário</p>
+            </div>
+
+            <ul class="mgsis-sidebar-menu">
+                <li>
+                    <a href="../index.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <circle cx="9" cy="12" r="3"></circle>
+                            <path d="M15 10h4"></path>
+                            <path d="M15 14h4"></path>
+                        </svg>
+                        INICIO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Cadastro/cadastro.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <circle cx="9" cy="12" r="3"></circle>
+                            <path d="M15 10h4"></path>
+                            <path d="M15 14h4"></path>
+                        </svg>
+                        CADASTROS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Estoque/estoque.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        ESTOQUE
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Vendas/vendas.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        VENDAS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Ordem de servico/ordem_servico.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 15px; text-decoration: none; font-weight: bold; box-sizing: border-box; background-color: #435be0; color: #ffffff; border-left: 4px solid #ffffff;">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                        ORDEM DE SERVIÇO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Compras/compras.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        COMPRAS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Financeiro/financeiro.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        FINANCEIRO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Relatorios/relatorios.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
+                        RELATÓRIOS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Utilitarios/utilitarios.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        UTILITÁRIOS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Ajuda/ajuda.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        AJUDA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Paginas-Sair/sair.html" class="mgsis-sidebar-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        SAIR
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+        <main class="mgsis-main-content">
+
+            <div id="mgsis-tela-principal" class="mgsis-view-active">
+                <div class="mgsis-cadastros-centro">
+                    <div class="mgsis-titulos-centro">
+                        <h2>Cadastros Gerais</h2>
+                        <p>Selecione o módulo abaixo para acessar os formulários ou ver mais opções.</p>
+                    </div>
+
+                    <div class="mgsis-grid-centralizada">
+                        <button class="mgsis-card-box" id="btn-modulo-produto">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M20,8.18L12,3.58L4,8.18V15.82L12,20.42L20,15.82V8.18M12,5.82L16.24,8.27L12,10.72L7.76,8.27L12,5.82M6,10.33L11,13.22V17.9L6,15V10.33M13,17.9V13.22L18,10.33V15L13,17.9Z" />
+                            </svg>
+                            <span>Produto</span>
+                            <div class="mgsis-seta-baixo"></div>
+                        </button>
+
+                        <button class="mgsis-card-box" id="mgsis-btn-cliente">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                            </svg>
+                            <span>Cliente</span>
+                        </button>
+
+                        <button class="mgsis-card-box" id="mgsis-btn-transporte">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M20,8H17V4H3C1.89,4 1,4.89 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8M6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5M18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5M17,12V9.5H19.5L21.47,12H17Z" />
+                            </svg>
+                            <span>Transporte</span>
+                        </button>
+
+                        <button class="mgsis-card-box">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M11.5,21A1.5,1.5 0 0,1 10,19.5A1.5,1.5 0 0,1 11.5,18A1.5,1.5 0 0,1 13,19.5A1.5,1.5 0 0,1 11.5,21M11.5,17C10.12,17 9,18.12 9,19.5C9,20.88 10.12,22 11.5,22C12.88,22 14,20.88 14,19.5C14,18.12 12.88,17 11.5,17M20.5,11.5L22,13L17,18L15.5,16.5L16.25,15.75L13,12.5C12.25,12.5 11.5,12.75 11,13L9,15L8,14L10,12C10.75,11.25 11.5,11 12.25,11L11,9.75L13.5,7.25L15,8.75L15.75,8L17.25,9.5L16.5,10.25L18,11.75L18.75,11L20.5,11.5M11.5,3A1.5,1.5 0 0,1 13,4.5A1.5,1.5 0 0,1 11.5,6A1.5,1.5 0 0,1 10,4.5A1.5,1.5 0 0,1 11.5,3M11.5,2C10.12,2 9,3.12 9,4.5C9,5.88 10.12,7 11.5,7C12.88,7 14,5.88 14,4.5C14,3.12 12.88,2 11.5,2Z" />
+                            </svg>
+                            <span>Fornecedor</span>
+                        </button>
+
+                        <button class="mgsis-card-box">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14M12,15L11,17L12,20L13,17L12,15Z" />
+                            </svg>
+                            <span>Colaborador</span>
+                        </button>
+
+                        <button class="mgsis-card-box">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
+                            </svg>
+                            <span>Segmento</span>
+                        </button>
+
+                        <button class="mgsis-card-box">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M11,19.93C7.05,19.43 4,16.05 4,12C4,11.68 4.03,11.36 4.08,11.05L7.88,14.85V15A2,2 0 0,0 9.88,17V18.13C10.25,18.82 10.6,19.41 11,19.93M19.04,17.15A1.97,1.97 0 0,0 17.88,17A2,2 0 0,0 15.88,15V14H13.88V10C13.88,9.45 13.43,9 12.88,9H8.88V7H10.88A2,2 0 0,0 12.88,5V4.21C16.66,4.86 19.64,8.14 19.95,12.18C19.95,13.92 19.66,15.61 19.04,17.15Z" />
+                            </svg>
+                            <span>Locais</span>
+                            <div class="mgsis-seta-baixo"></div>
+                        </button>
+
+                        <button class="mgsis-card-box">
+                            <svg class="mgsis-icon-box" viewBox="0 0 24 24">
+                                <path
+                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-2 17H8v-2h4v2zm2-4H8v-2h6v2zm-1-5V3.5L18.5 9H13z" />
+                            </svg>
+                            <span>Fiscais</span>
+                            <div class="mgsis-seta-baixo"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="mgsis-footer">
+
+        <div class="mgsis-footer-accent"></div>
+
+        <div class="mgsis-footer-container">
+
+            <div class="mgsis-footer-col">
+                <a href="#" class="mgsis-footer-logo">
+                    <svg class="mgsis-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM11 19.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.15.56 5.76 2.8 6.64 5.77l-6.64-2.28V4.07zm6.81 7.21L13 13.62v-4.14l6.81-1.67v3.47zm-6.81 8.65v-4.14l6.81 1.67c-.88 2.97-3.49 5.21-6.64 5.77l-.17-3.3z" />
+                    </svg>
+                    <span class="mgsis-logo-text-blue">MG</span>
+                    <span class="mgsis-logo-text-yellow">SIS</span>
+                </a>
+                <p class="mgsis-footer-desc">Soluções completas em gestão empresarial. Simplificando processos e
+                    impulsionando resultados para o seu negócio.</p>
+            </div>
+
+            <div class="mgsis-footer-col">
+                <h4 class="mgsis-footer-title">Links Úteis</h4>
+                <ul class="mgsis-footer-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Manual do Usuário</a></li>
+                    <li><a href="#">Módulos do Sistema</a></li>
+                    <li><a href="#">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="mgsis-footer-col">
+                <h4 class="mgsis-footer-title">Suporte Técnico</h4>
+                <ul class="mgsis-footer-links">
+                    <li><a href="#">Abrir Chamado</a></li>
+                    <li><a href="#">Falar com Atendente</a></li>
+                    <li><a href="#">Atualizações do Sistema</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mgsis-footer-bottom">
+            <p>&copy; 2026 MGSIS ERP. Todos os direitos reservados. | Versão 3.4.1</p>
+        </div>
+
+    </footer>
+
+    <div id="mgsis-modal-imagem" class="mgsis-modal">
+        <span class="mgsis-modal-fechar">&times;</span>
+        <img class="mgsis-modal-conteudo" id="mgsis-img-ampliada">
+        <div id="mgsis-modal-legenda"></div>
+    </div>
+
+    <script src="../Estilizacoes/Manual.js"></script>
+</body>
+
+</html>
